@@ -1,0 +1,19 @@
+class Solution {
+public:
+    void setZeroes(vector<vector<int>>& matrix) {
+        vector<vector<int>> matExp=matrix;
+        for(int i =0; i<matExp.size();i++){
+            for(int j=0;j<matExp[0].size();j++){
+                if(matExp[i][j] == 0){
+                    for(int k=0;k<matExp.size();k++){
+                        matrix[k][j]=0;
+                    }
+                    for(int k=0;k<matExp[0].size();k++){
+                        matrix[i][k]=0;
+                    }
+                }
+            }
+        }
+        
+    }
+};
